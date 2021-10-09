@@ -1,0 +1,142 @@
+[
+    {
+        "id": "e921f712f90fce0d",
+        "type": "tab",
+        "label": "フロー 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "410ffb6eb8d2be4e",
+        "type": "inject",
+        "z": "e921f712f90fce0d",
+        "name": "切り替え1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 100,
+        "wires": [
+            [
+                "33f0594c2160f458"
+            ]
+        ]
+    },
+    {
+        "id": "33f0594c2160f458",
+        "type": "SetCurrentScene",
+        "z": "e921f712f90fce0d",
+        "name": "休憩中",
+        "scene": "休憩中の表示",
+        "sceneType": "sceneName",
+        "obsInstance": "03562addb8ac0676",
+        "x": 310,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f05650237fe0a84f",
+        "type": "inject",
+        "z": "e921f712f90fce0d",
+        "name": "切り替え2",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 160,
+        "wires": [
+            [
+                "f754d070f9690b42"
+            ]
+        ]
+    },
+    {
+        "id": "f754d070f9690b42",
+        "type": "SetCurrentScene",
+        "z": "e921f712f90fce0d",
+        "name": "カメラ映像のみ",
+        "scene": "内蔵カメラの映像",
+        "sceneType": "sceneName",
+        "obsInstance": "03562addb8ac0676",
+        "x": 340,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "04f9255b377d5739",
+        "type": "inject",
+        "z": "e921f712f90fce0d",
+        "name": "切り替え3",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 220,
+        "wires": [
+            [
+                "5e1c0c701f45976b"
+            ]
+        ]
+    },
+    {
+        "id": "5e1c0c701f45976b",
+        "type": "SetCurrentScene",
+        "z": "e921f712f90fce0d",
+        "name": "画像＋カメラ映像",
+        "scene": "カメラと画像",
+        "sceneType": "sceneName",
+        "obsInstance": "03562addb8ac0676",
+        "x": 350,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "03562addb8ac0676",
+        "type": "obs-instance",
+        "name": "",
+        "host": "localhost",
+        "port": "4445"
+    }
+]
